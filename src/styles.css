@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: var(--s-1-5);
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .wrapper {
+    padding: var(--s-2);
+    width: 400px;
+  }
+}
+
+:root {
+    /* Colors */
+  --color-highlight: hsl(75, 94%, 57%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-button: hsl(0, 0%, 20%);
+  --color-bg-wrapper: hsl(0, 0%, 12%);
+  --color-bg-body: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --font-size: 14px;
+  --font-family-inter: 'Inter', sans-serif;
+
+  /* Spacing */
+  --s-2: 2rem;
+  --s-1-5: 1.5rem;
+  --s-1: 1rem;
+  --s-0-75: 0.75rem;
+  --s-0-5: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size);
+  color: var(--color-text);
+  background-color: var(--color-bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100lvh;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  margin: 0 var(--s-1-5);
+  background-color: var(--color-bg-wrapper);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-1-5);
+}
+
+img {
+  border-radius: 50%;
+  height: 6rem;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-0-5);
+  align-items: center;
+  cursor: pointer;
+}
+
+.info__name {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.info__location {
+  color: var(--color-highlight);
+  font-weight: 700;
+}
+
+.desc {
+  font-weight: 300;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  width: 100%;
+}
+
+.social-link {
+  border: none;
+  outline: none;
+  background-color: var(--color-button);
+  color: var(--color-text);
+  font-weight: 600;
+  padding: var(--s-0-75);
+  border-radius: 10px;
+  font-family: var(--font-family-inter);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-bg-body);
+}
